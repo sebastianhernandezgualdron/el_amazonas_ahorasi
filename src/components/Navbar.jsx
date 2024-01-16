@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/icono-principal.png";
 import { Link as RouterLink, useNavigate, useLocation } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import QuotePage from "./QuotePage";
 
 import { FaXmark, FaBars } from "react-icons/fa6";
 
@@ -48,7 +49,6 @@ const Navbar = () => {
             ? "sticky top-0 left-0 right-0 border bg-white duration-300"
             : ""
         } `}
-
       >
         <div className="flex justify-between items-center text-base gap-8  ">
           <RouterLink
@@ -114,9 +114,13 @@ const Navbar = () => {
             >
               Pedir demo
             </a>
-            <button className="bg-brandPrimary text-white py-2 px-6 transition-all duration-300 rounded hover:bg-neutralDGrey ">
-              Cotizar
-            </button>
+
+            <RouterLink to="cotizar">
+              {" "}
+              <button className="bg-brandPrimary text-white py-2 px-6 transition-all duration-300 rounded hover:bg-neutralDGrey">
+                Cotizar
+              </button>
+            </RouterLink>
           </div>
           {/* menu btn for only mobile devices  */}
           <div className="md:hidden ">

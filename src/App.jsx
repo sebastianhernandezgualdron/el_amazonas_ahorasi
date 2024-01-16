@@ -10,6 +10,7 @@ import AboutPage from "./components/AboutPage";
 import Products from "./components/Products";
 import Services from "./components/Services";
 import { Link, Routes, Route } from "react-router-dom";
+import QuotePage from "./components/QuotePage";
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
           }
         />
         <Route path="/contacto" element={<ContactPage />} />
+        <Route path="/cotizar" element={<QuotePage />} />
+
         <Route
           path="/nosotros"
           element={
